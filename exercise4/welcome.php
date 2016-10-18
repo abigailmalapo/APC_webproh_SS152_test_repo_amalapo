@@ -27,16 +27,17 @@ img:hover {
 
 <font face = "Century Gothic" size = "5" color = "White"> 
  <br><FONT SIZE ="6"><B>WELCOME TO MY PAGE</FONT></B><BR>
- MY NAME IS ABBI<BR><br><br>
+ MY NAME IS ABBI<BR><br>
 
 
- <img src="1.jpg" width="170" height="170" alt="location">
- <img src="3.jpg" width="170" height="170" alt="location"><BR>
-
- <img src="4.jpg" width="170" height="170" alt="location">
- <img src="2.jpg" width="170" height="170" alt="location"><BR>
+ <img src="1.jpg" width="120" height="120" alt="location">
+ <img src="3.jpg" width="120" height="120" alt="location">
+ <img src="4.jpg" width="120" height="120" alt="location">
+ <img src="2.jpg" width="120" height="120" alt="location">
 
  
+ 
+ </center>
  
  
 <font size="3">
