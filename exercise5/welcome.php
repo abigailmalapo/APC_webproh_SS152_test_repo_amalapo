@@ -72,7 +72,7 @@ function delete_id(id)
 {
  if(confirm('Sure to Delete ?'))
  {
-  window.location.href='index.php?delete_id='+id;
+  window.location.href='welcome.php?delete_id='+id;
  }
 }
 </script>
@@ -102,6 +102,7 @@ function delete_id(id)
         <td><?php echo $row[1]; ?></td>
         <td><?php echo $row[2]; ?></td>
         <td><?php echo $row[3]; ?></td>
+		<td><?php echo $row[4]; ?></td>
 		
   <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
