@@ -51,6 +51,11 @@ function delete_id(id)
     </div>
 </div>
 
+ <img src="1.jpg" width="120" height="120" alt="location">
+ <img src="3.jpg" width="120" height="120" alt="location">
+ <img src="4.jpg" width="120" height="120" alt="location">
+ <img src="2.jpg" width="120" height="120" alt="location">
+
 <div id="body">
  <div id="content">
     <table align="center">
