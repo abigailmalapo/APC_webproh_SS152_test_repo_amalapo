@@ -7,13 +7,14 @@ if(isset($_POST['btn-save']))
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
-  $website = $_POST['website'];
+ $email = $_POST['email'];
+ $website = $_POST['website'];
  // variables for input data
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,user_city,website) VALUES('$first_name','$last_name','$city_name','$website')";
- mysqli_query($con,$sql_query);
+        $sql_query = "INSERT INTO users(first_name,last_name,user_city,email,website) VALUES('$first_name','$last_name','$city_name','$email','$website')";
+ mysql_query($sql_query);
         
         // sql query for inserting data into database
  
@@ -22,31 +23,41 @@ if(isset($_POST['btn-save']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <center>
 
-
+<div id="header">
+ <div id="content">
+    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    </div>
+</div>
 <div id="body">
  <div id="content">
     <form method="post">
     <table align="center">
     <tr>
-    <td align="center"><a href="welcome.php">back to main page</a></td>
+    <td align="center"><a href="index.php">back to main page</a></td>
     </tr>
     <tr>
-    <td><input type="text" name="first_name" placeholder="Full Name" required /></td>
+    <td><input type="text" name="first_name" placeholder="Name" required /></td>
     </tr>
     <tr>
     <td><input type="text" name="last_name" placeholder="Nickname" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="Email" required /></td>
+    <td><input type="text" name="city_name" placeholder="Address" required /></td>
     </tr>
-	 <tr>
-    <td><input type="text" name="website" placeholder="Webiste" required /></td>
+	<tr>
+    <td><input type="text" name="email" placeholder="Email Address" required /></td>
     </tr>
+	<tr>
+    <td><input type="text" name="website" placeholder="Website" required /></td>
+    </tr>
+	
+	
     <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
     </tr>
