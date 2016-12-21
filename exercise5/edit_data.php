@@ -3,8 +3,8 @@ include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
  $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
- $result_set=mysqli_query($con,$sql_query);
- $fetched_row=mysqli_fetch_array($result_set);
+ $result_set=mysql_query($sql_query);
+ $fetched_row=mysql_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
@@ -12,20 +12,21 @@ if(isset($_POST['btn-update']))
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
+ $email = $_POST['email'];
  $website = $_POST['website'];
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name',website_user='$website' WHERE user_id=".$_GET['edit_id'];
+ $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name',email='$email'website='$website' WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
- if(mysqli_query($con,$sql_query))
+ if(mysql_query($sql_query))
  {
   ?>
   <script type="text/javascript">
   alert('Data Are Updated Successfully');
-  window.location.href='welcome.php';
+  window.location.href='index.php';
   </script>
   <?php
  }
@@ -41,7 +42,7 @@ if(isset($_POST['btn-update']))
 }
 if(isset($_POST['btn-cancel']))
 {
- header("Location: welcome.php");
+ header("Location: index.php");
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -65,17 +66,22 @@ if(isset($_POST['btn-cancel']))
     <form method="post">
     <table align="center">
     <tr>
-    <td><input type="text" name="first_name" placeholder="Fullname" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
+    <td><input type="text" name="first_name" placeholder="Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
     </tr>
     <tr>
     <td><input type="text" name="last_name" placeholder="Nickname" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="Email" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    <td><input type="text" name="city_name" placeholder="Address" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="website" placeholder="Website" value="<?php echo $fetched_row['website']; ?>" required /></td>
+    <td><input type="text" name="email" placeholder="Email Address" required /></td>
     </tr>
+	<tr>
+    <td><input type="text" name="website" placeholder="Website" required /></td>
+    </tr>
+	
+	
     <tr>
     <td>
     <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
