@@ -17,7 +17,7 @@ if(isset($_POST['btn-update']))
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name',email='$email'website='$website' WHERE user_id=".$_GET['edit_id'];
+ $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name',email='$email',website='$website' WHERE user_id=".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
@@ -49,7 +49,7 @@ if(isset($_POST['btn-cancel']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
+<title>WELCOME TO MY PAGE</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
@@ -57,7 +57,7 @@ if(isset($_POST['btn-cancel']))
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    <label>WELCOME TO MY PAGE</label>
     </div>
 </div>
 
